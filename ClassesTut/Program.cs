@@ -6,20 +6,16 @@ namespace ClassesTut
     {
         static void Main(string[] args)
         {
-            Rectangle rect1;
-            rect1.length = 200;
-            rect1.width = 50;
-            Console.WriteLine("Area of rect1 : {0}",
-                rect1.Area());
+            Animal fox = new Animal()
+            {
+                name = "Red",
+                sound = "Raaww"
+            };
 
-            Rectangle rect2 = new Rectangle(100,40);
+            fox.MakeSound();
 
-            rect2 = rect1;
-            rect1.length = 33;
-
-            Console.WriteLine("rect2.length : {0}",
-                rect2.length);
-
+            Console.WriteLine("# of animals : {0}",
+                Animal.GetNumAnimals());
 
             Console.ReadLine();
         }
