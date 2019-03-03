@@ -77,6 +77,17 @@ namespace ClassesTut
             whiskers.MakeSound();
             grover.MakeSound();
 
+            whiskers.SetAnimalIDInfo(12345,"Sally Smith");
+            grover.SetAnimalIDInfo(123456,"Paul Brown");
+
+            whiskers.GetAnimalIDInfo();
+            grover.GetAnimalIDInfo();
+
+            Animal.AnimalHealth getHealth = new Animal.AnimalHealth();
+
+            Console.WriteLine("Is my animal healthy : {0}",
+                getHealth.HealthyWeight(11,146));
+
             Console.ReadLine();
         }
 
