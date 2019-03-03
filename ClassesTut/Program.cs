@@ -6,16 +6,33 @@ namespace ClassesTut
     {
         static void Main(string[] args)
         {
-            Animal fox = new Animal()
+            #region           
+            //Animal fox = new Animal()
+            //{
+            //    name = "Red",
+            //    sound = "Raaww"
+            //};
+
+            //fox.MakeSound();
+
+            //Console.WriteLine("# of animals : {0}",
+            //    Animal.GetNumAnimals());
+            #endregion
+
+            //Console.WriteLine("Area of Rectangle : {0}",
+            //    ShapeMath.GetArea("rectangle",5,6));
+
+            int? randNum = null;
+
+            if(randNum == null)
             {
-                name = "Red",
-                sound = "Raaww"
-            };
+                Console.WriteLine("randNum is null");
+            }
 
-            fox.MakeSound();
-
-            Console.WriteLine("# of animals : {0}",
-                Animal.GetNumAnimals());
+            if (!randNum.HasValue)
+            {
+                Console.WriteLine("randNum is null");
+            }
 
             Console.ReadLine();
         }
