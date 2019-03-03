@@ -23,7 +23,7 @@ namespace ClassesTut
             Console.WriteLine($"{Name} had the ID of {animalIDInfo.IDNum} and is owned by {animalIDInfo.Owner}");
         }
 
-        public void MakeSound()
+        public virtual void MakeSound()
         {
             Console.WriteLine($"{Name} says {Sound}");
         }

@@ -88,6 +88,22 @@ namespace ClassesTut
             Console.WriteLine("Is my animal healthy : {0}",
                 getHealth.HealthyWeight(11,146));
 
+            Animal monkey = new Animal()
+            {
+                Name = "Happy",
+                Sound = "eeee"
+            };
+
+            Animal spot = new Dog()
+            {
+                Name = "Spot",
+                Sound = "Wooooof",
+                Sound2 = "Geeerrr"
+            };
+
+            monkey.MakeSound();
+            spot.MakeSound();
+
             Console.ReadLine();
         }
 

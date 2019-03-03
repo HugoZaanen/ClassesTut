@@ -8,7 +8,7 @@ namespace ClassesTut
     {
         public string Sound2 { get; set; } = "Grrrrr";
 
-        public new void MakeSound()
+        public override void MakeSound()
         {
             Console.WriteLine($"{Name} says {Sound} and {Sound2}");
         }
