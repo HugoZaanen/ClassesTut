@@ -8,50 +8,36 @@ namespace ClassesTut
     class Animal
     {
         private string name;
-        private string sound;
-
-        public const string SHELTER = "Derek's home for Animals";
-
-        public readonly int idNum;
+        protected string sound;
 
         public void MakeSound()
         {
-            Console.WriteLine("{0} says {1}",name,sound);
+            Console.WriteLine($"{Name} says {Sound}");
         }
 
         public Animal()
-            : this("No Name", "No Sound") { }
+            : this("No Name","No Sound") { }
 
         public Animal(string name)
-            : this(name, "No sound") { }
+            : this(name,"No Sound"){}
 
-        public Animal(string name, string sound)
+        public Animal(string name,string sound)
         {
-            SetName(name);
+            Name = name;
             Sound = sound;
-
-            NumOfAnimals = 1;
-
-            Random rnd = new Random();
-            idNum = rnd.Next(1,2147483640);
-
         }
 
-        public void SetName(string name)
+        public string Name
         {
-            if(!name.Any(char.IsDigit))
+            get { return name; }
+            set
             {
-                this.name = name;
-            }else
-            {
-                this.name = "No Name";
-                Console.WriteLine("Name can't contain numbers");
+                if(!value.Any(char.IsDigit))
+                {
+                    name = "No name";
+                }
+                name = value;
             }
-        }
-
-        public string GetName()
-        {
-            return name;
         }
 
         public string Sound
@@ -59,26 +45,12 @@ namespace ClassesTut
             get { return sound; }
             set
             {
-                if(value.Length > 10)
+                if (value.Length > 10)
                 {
-                    sound = "No Sound";
-                    Console.WriteLine("Sound is too long");                    
+                    name = "No sound";
                 }
-                else
-                {
-                    sound = value;
-                }
+                sound = value;
             }
-        }
-
-        public string Owner { get; set; } = "No Owner";
-
-        public static int numOfAnimals = 0;
-
-        public static int NumOfAnimals
-        {
-            get { return numOfAnimals; }
-            set { numOfAnimals += value; }
         }
     }
 }

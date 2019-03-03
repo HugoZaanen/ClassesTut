@@ -6,6 +6,7 @@ namespace ClassesTut
     {
         static void Main(string[] args)
         {
+
             #region           
             //Animal fox = new Animal()
             //{
@@ -36,26 +37,45 @@ namespace ClassesTut
             //}
             #endregion
 
-            Animal cat = new Animal();
+            #region
+            //Animal cat = new Animal();
 
-            cat.SetName("Whiskers");
-            cat.Sound = "Meow";
+            //cat.SetName("Whiskers");
+            //cat.Sound = "Meow";
 
-            Console.WriteLine("The cat is named {0} and says {1}",
-                cat.GetName(),cat.Sound);
+            //Console.WriteLine("The cat is named {0} and says {1}",
+            //    cat.GetName(),cat.Sound);
 
-            cat.Owner = "Derek";
+            //cat.Owner = "Derek";
 
-            Console.WriteLine("{0} owner is {1}",
-                cat.GetName(), cat.Owner);
+            //Console.WriteLine("{0} owner is {1}",
+            //    cat.GetName(), cat.Owner);
 
-            Console.WriteLine("{0} shelter id is {1}",
-                cat.GetName(),cat.idNum);
+            //Console.WriteLine("{0} shelter id is {1}",
+            //    cat.GetName(),cat.idNum);
 
-            Animal fox = new Animal("Oscar","Rawrrr");
+            //Animal fox = new Animal("Oscar","Rawrrr");
 
-            Console.WriteLine("# of Animals : {0}",
-                Animal.NumOfAnimals);
+            //Console.WriteLine("# of Animals : {0}",
+            //    Animal.NumOfAnimals);
+            #endregion
+
+            Animal whiskers = new Animal()
+            {
+                Name = "Whiskers",
+                Sound = "Meow"
+            };
+
+            Animal grover = new Dog()
+            {
+                Name = "Grover",
+                Sound = "Woof",
+                Sound2 = "Grrr"
+            };
+            grover.Sound = "Woooof";
+
+            whiskers.MakeSound();
+            grover.MakeSound();
 
             Console.ReadLine();
         }
